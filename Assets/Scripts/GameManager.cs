@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using Clients;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    //плохое решение
+    [SerializeField]
+    private Transform _spawnerTransform;
+    private ISpawner<Client> _clientsSpawner;
+
+    private int _clientsSize = 4;
+    
+    private void Start()
     {
-        
+        _clientsSpawner = _spawnerTransform.GetComponent<ISpawner<Client>>();
+        //for(int i = 0; i < _clientsSize; i++)
+        //    _clientsSpawner.Spawn<Client>();
     }
 }

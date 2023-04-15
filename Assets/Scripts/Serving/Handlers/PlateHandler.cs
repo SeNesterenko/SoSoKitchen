@@ -4,6 +4,8 @@ namespace Serving.Handlers
 {
     public class PlateHandler : IIngredientHandler
     {
+        public bool IsCooking = false;
+        
         public Ingredient GetIngredient()
         {
             //если не собрано
