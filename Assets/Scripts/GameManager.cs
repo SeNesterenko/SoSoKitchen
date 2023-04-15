@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Transform _spawnerTransform;
     private ISpawner<Client> _clientsSpawner;
+    
+    
 
-    private int _clientsSize = 4;
+   // private int _clientsSize = 4;
     
     private void Start()
     {
