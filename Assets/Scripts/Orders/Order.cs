@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Orders
 {
-    [Serializable]
-    public class Order
+    [CreateAssetMenu(fileName = "Order", menuName = "Order")]
+    public class Order: ScriptableObject
     {
         public string Name => _name;
         public int Cost => _cost;

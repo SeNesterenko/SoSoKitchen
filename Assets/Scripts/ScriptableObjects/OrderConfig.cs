@@ -6,8 +6,8 @@ namespace ScriptableObjects
     [CreateAssetMenu(fileName = "OrderConfig", menuName = "OrderConfig")]
     public class OrderConfig : ScriptableObject
     {
-        public Order[] Order => _order;
+        public Order[] Orders => _orders;
         
-        [SerializeField] private Order[] _order;
+        [SerializeField] private Order[] _orders;
     }
 }
